@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+	<head>
+  		<link href="css/bootstrap.css" rel="stylesheet">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<title>Complete List</title>
+
+	</head>
+
+  <body>
+	<div class="container">
+		<table class="table table-hover">
+			<tr>
+				<th>Registration Id
+				<th>Name
+				<th>Contact Number
+				<th>Email
+				<th>Total Fee
+				<th>Paid Fee
+				<th>Remaining Fee
+				<th>Events
+				<th>Workshops
+				<th>Tutorials
+				<th>Volunteer
+			</tr>
+
+	    {% for participant in participants %}
+	      	<tr>
+				<td>{{ participant.regid }}
+				<td>{{ participant.name }}
+				<td>{{ participant.contactnum }}
+				<td>{{ participant.email }}
+				<td>{{ participant.totalfee }}
+				<td>{{ participant.paid }}
+				<td>{{ participant.remaining }}
+				<td>{{ participant.EVENTS }}
+				<td>{{ participant.WORKSHOPS }}
+				<td>{{ participant.TUTORIALS }}
+				<td>{{ participant.volunteer }}
+			</tr>
+	    {% endfor %}
+		</table>
+
+		<hr>
+	<button>Export</button><small>(Does Nothing For Now)</small>
+	</div>
+  </body>
+</html>
+{% endautoescape %}

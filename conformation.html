@@ -1,0 +1,120 @@
+<!DOCTYPR html>
+<html>
+
+<head>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Data Conformation</title>
+
+  <SCRIPT type="text/javascript">
+	window.history.forward();
+	function noBack() { window.history.forward(); }
+  </SCRIPT>
+</head>
+
+<body onload="noBack();" onpageshow="noBack();">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8 center-block">
+        <h2> Conform Data</h2>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+      <form class="form-horizontal" action="/Submit" method="post">
+        <div class="form-group">
+          <label for="regid" class="col-sm-2 control-label">Registration Id</label>
+          <div class="col-sm-10">
+            <input type="text" name="regid" class="form-control" id="regid" placeholder="Registration Id" value="{{ regid }}">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="name" class="col-sm-2 control-label">Name</label>
+          <div class="col-sm-10">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Name"  value="{{ name }}">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="contactnum" class="col-sm-2 control-label">Contact Number</label>
+          <div class="col-sm-10">
+            <input type="text" name="contactnum" class="form-control" id="contactnum" placeholder="Contact Number" value="{{ contactnum }}" maxlength="10" minlength="10">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="col-sm-2 control-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" name="email" class="form-control" id="email" placeholder="Email" value={{ email }}>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="totalfee" class="col-sm-2 control-label">Total Fee</label>
+          <div class="col-sm-2">
+            <input type="number" name="totalfee" class="form-control" id="totalfee" value={{ totalfee }} required>
+          </div>
+
+          <label for="paid" class="col-sm-2 control-label">Paid</label>
+          <div class="col-sm-2">
+            <input type="number" name="paid" class="form-control" id="paid" value={{ paid }} required>
+          </div>
+
+          <label for="remaining" class="col-sm-2 control-label">Remaining</label>
+          <div class="col-sm-2">
+            <input type="number" name="remaining" class="form-control" id="remaining" value={{ remaining }} required>
+          </div>
+        </div>
+
+        <br>
+        <hr>
+
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-4"><h3>EVENTS</h3></div>
+          <div class="col-md-4"><h3>WORKSHOPS</h3></div>
+          <div class="col-md-2"></div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-4">
+            <input type="checkbox" name="EVENTS" value="Mock Placement" {% if "Mock Placement" in EVENTS %}checked="1"{% endif %}> Mock Placement
+          </div>
+          <div class="col-md-4">
+            <input type="checkbox" name="WORKSHOPS" value="Internet Of Things" {% if "Internet Of Things" in EVENTS %}checked="1"{% endif %}> Internet Of Things
+          </div>
+        </div>
+
+        <div class="row"><div class="col-md-2"></div> <div class="col-md-4"><input type="checkbox" name="EVENTS" value="General Quiz" {% if "General Quiz" in EVENTS %}checked="1"{% endif %}> General Quiz</div><div class="col-md-4"></div></div>
+        <div class="row"><div class="col-md-2"></div> <div class="col-md-4"><input type="checkbox" name="EVENTS" value="Pockmon Go" {% if "Pockmon Go" in EVENTS %}checked="1"{% endif %}> Pockmon Go</div><div class="col-md-4"></div></div>
+        <div class="row"><div class="col-md-2"></div> <div class="col-md-4"><input type="checkbox" name="EVENTS" value="Code-Base Tressure Hunt" {% if "Code-Base Tressure Hunt" in EVENTS %}checked="1"{% endif %}> Code-Base Tressure Hunt</div><div class="col-md-4"></div></div>
+        <div class="row"><div class="col-md-2"></div> <div class="col-md-4"><input type="checkbox" name="EVENTS" value="Machine Learning" {% if "Machine Learning" in EVENTS %}checked="1"{% endif %}> Machine Learning</div><div class="col-md-4"></div></div>
+        <div class="row"><div class="col-md-2"></div> <div class="col-md-4"><input type="checkbox" name="EVENTS" value="Core Coding" {% if "Core Coding" in EVENTS %}checked="1"{% endif %}> Core Coding</div><div class="col-md-4"></div></div>
+        <div class="row"><div class="col-md-2"></div> <div class="col-md-4"><input type="checkbox" name="EVENTS" value="Light Coding" {% if "Light Coding" in EVENTS %}checked="1"{% endif %}> Light Coding</div><div class="col-md-4"></div></div>
+        <div class="row"><div class="col-md-2"></div> <div class="col-md-4"><input type="checkbox" name="EVENTS" value="Data Structures Coding" {% if "Data Structures Coding" in EVENTS %}checked="1"{% endif %}> Data Structures Coding</div><div class="col-md-4"></div></div>
+        <div class="row"><div class="col-md-2"></div> <div class="col-md-4"><input type="checkbox" name="EVENTS" value="Web Designing" {% if "Web Designing" in EVENTS %}checked="1"{% endif %}> Web Designing</div><div class="col-md-4"></div></div>
+        <div class="row"><div class="col-md-2"></div> <div class="col-md-4"><input type="checkbox" name="EVENTS" value="R&D" {% if "R&D" in EVENTS %}checked="1"{% endif %}> R&D</div><div class="col-md-4"></div></div>
+        
+        <hr>
+
+        <div class="row">
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Submit</button>
+          </div>
+        </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

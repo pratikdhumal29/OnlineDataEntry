@@ -1,0 +1,25 @@
+application: blitz2017-177306
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /csi
+  static_dir: csi
+- url: /css
+  static_dir: css
+- url: /js
+  static_dir: js
+- url: /.*
+  script: starting.app
+  login: required
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+
+builtins:
+- remote_api: on
