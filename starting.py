@@ -15,8 +15,8 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     autoescape=True)
 
 
-allowed_users=["13bce081@nirmauni.ac.in","13bce007@nirmauni.ac.in","13bce130@nirmauni.ac.in","13bce109@nirmauni.ac.in","14bce024@nirmauni.ac.in"]
-showAll_users=["13bce081@nirmauni.ac.in","13bce007@nirmauni.ac.in","13bce130@nirmauni.ac.in","13bce109@nirmauni.ac.in","14bce024@nirmauni.ac.in"]
+allowed_users=["16bce060@nirmauni.ac.in","16bit010@nirmauni.ac.in","16bit091@nirmauni.ac.in","15bit054@nirmauni.ac.in","15bit058@nirmauni.ac.in","15bce114@nirmauni.ac.in","15bce041@nirmauni.ac.in","14bce036@nirmauni.ac.in","15bce103@nirmauni.ac.in","15bit028@nirmauni.ac.in","15bit015@nirmauni.ac.in","15bit005@nirmauni.ac.in","15bit008@nirmauni.ac.in","15bit032@nirmauni.ac.in","15bit013@nirmauni.ac.in","15bit057@nirmauni.ac.in","15bit058@nirmauni.ac.in","15bit024@nirmauni.ac.in","15bit054@nirmauni.ac.in","15bit057@nirmauni.ac.in","15bit052@nirmauni.ac.in","15bit003@nirmauni.ac.in","15bit050@nirmauni.ac.in","15bit063@nirmauni.ac.in","15bce024@nirmauni.ac.in","15bce050@nirmauni.ac.in","14bce024@nirmauni.ac.in","14bce029@nirmauni.ac.in","14bce030@nirmauni.ac.in","14bce050@nirmauni.ac.in","14bce119@nirmauni.ac.in","14bce127@nirmauni.ac.in"]
+showAll_users=["14bce024@nirmauni.ac.in","14bce029@nirmauni.ac.in","14bce030@nirmauni.ac.in","14bce036@nirmauni.ac.in","14bce050@nirmauni.ac.in","14bce119@nirmauni.ac.in","14bce127@nirmauni.ac.in"]
 
 class MyHandler(webapp2.RequestHandler):
     def get(self):
@@ -61,6 +61,8 @@ class Conformation(webapp2.RequestHandler):
         #self.response.write("hhhhhhs")
         regid=self.request.get('regid')
         name=self.request.get('name')
+        college=self.request.get('college')
+        branch=self.request.get('branch')
         contactnum=self.request.get('contactnum')
         email=self.request.get('email')
         totalfee=self.request.get('totalfee')
@@ -72,6 +74,8 @@ class Conformation(webapp2.RequestHandler):
         template_values={
             'regid' : regid,
             'name': name,
+            'college' : college,
+            'branch' : branch,
             'contactnum': contactnum,
             'email':email,
             'totalfee': totalfee,
@@ -82,6 +86,7 @@ class Conformation(webapp2.RequestHandler):
         }
         template = JINJA_ENVIRONMENT.get_template('conformation.html')
         self.response.write(template.render(template_values))
+    
 
 
 class FormData(ndb.Model):
@@ -89,6 +94,8 @@ class FormData(ndb.Model):
     regid = ndb.StringProperty()
     name = ndb.StringProperty()
     contactnum = ndb.StringProperty()
+    college = ndb.StringProperty()
+    branch = ndb.StringProperty()
     email = ndb.StringProperty()
     totalfee = ndb.IntegerProperty()
     paid = ndb.IntegerProperty()
@@ -96,6 +103,8 @@ class FormData(ndb.Model):
     EVENTS = ndb.StringProperty()
     WORKSHOPS = ndb.StringProperty()
     volunteer = ndb.StringProperty()
+    date=ndb.DateTimeProperty(auto_now_add=True)
+
 
 class SubmitNuForm(webapp2.RequestHandler):
     def get(self):
@@ -106,6 +115,8 @@ class SubmitNuForm(webapp2.RequestHandler):
         d=FormData()
         d.regid=self.request.get('regid')
         d.name=n
+        d.college=self.request.get('college')
+        d.branch=self.request.get('branch')
         d.contactnum=self.request.get('contactnum')
         d.email=self.request.get('email')
         d.totalfee=int(self.request.get('totalfee'))
@@ -142,6 +153,31 @@ class ShowAll(webapp2.RequestHandler):
 	def post(self):
 		self.response.write("Helllllo, wrong page... nothing to do here !!")
 
+class Query(webapp2.RequestHandler):
+	def get(self):
+		participants_query=FormData.query(FormData.email == self.request.get('email'))
+		participants=participants_query.fetch()
+#		self.response.write("hello from showAll")
+		template_values={'participants': participants }
+		template = JINJA_ENVIRONMENT.get_template('Query.html')
+		self.response.write(template.render(template_values))
+#        self.response.write(template.render(template_values))
+		
+	def post(self):
+		self.response.write("Helllllo, wrong page... nothing to do here !!")
+
+class ViewEvents(webapp2.RequestHandler):
+	def get(self):
+		template = JINJA_ENVIRONMENT.get_template('ViewEvents.html')
+		self.response.write(template.render())
+
+		#self.response.write(template.render(template_values))
+#        self.response.write(template.render(template_values))
+		
+	def post(self):
+		self.response.write("Helllllo, wrong page... nothing to do here !!")
+
+
 
 app = webapp2.WSGIApplication([
     ('/', MyHandler),
@@ -149,4 +185,6 @@ app = webapp2.WSGIApplication([
 	('/Conformation', Conformation),
 	('/Submit',SubmitNuForm),
 	('/ShowAll',ShowAll),
+	('/Query',Query),
+	('/ViewEvents',ViewEvents),
 ], debug=True)

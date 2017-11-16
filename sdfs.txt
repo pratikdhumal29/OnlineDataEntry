@@ -1,0 +1,28 @@
+<div class="col-md-4">
+        
+        <legends><strong>Elecspire</strong></legends><br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="EMBED CHI">
+        Embed Chi<br/>        
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="MAN VS TECHNOLOGY">
+        Man vs Technology<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="FUSE DEFUSE">
+        Fuse Defuse<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="GOT VOLTS?">
+        Got Volts?<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="NERD QUIZ">
+        Nerd Quiz<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="TECH MEME MAKER">
+        Tech Meme Maker<br/><br/>
+
+        <legends><strong>Mechatrix</strong></legends><br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="HELL IN CELL">
+        Hell In Cell<br/>        
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="ROBORUN">
+        Roborun<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="WATER ROCKET">
+        Water Rocket<br/>        
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="CAD CREATOR">
+        Cad Creator<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="AERO MOBILE QUIZ">
+        Aero Mobile Quiz<br/><br/>
+        

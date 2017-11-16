@@ -19,7 +19,7 @@
     <div class="row">
       <div class="col-md-2"></div>
       <div class="col-md-8 center-block">
-        <h2> Conform Data</h2>
+        <h2> Confirm Data</h2>
       </div>
       <div class="col-md-2"></div>
     </div>
@@ -28,12 +28,266 @@
 
     <div class="row">
       <form class="form-horizontal" action="/Submit" method="post">
+
+        
+         <div class="form-group">
+          <label for="name" class="col-sm-2 control-label">Reg Id</label>
+          <div class="col-sm-10">
+            <input type="text" name="regid" class="form-control" id="regid" placeholder="Reg Id" required value="{{ regid }}">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="name" class="col-sm-2 control-label">Name</label>
+          <div class="col-sm-10">
+            <input type="text" name="name" class="form-control" id="name" placeholder="Name" required value="{{ name }}">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="name" class="col-sm-2 control-label">College</label>
+          <div class="col-sm-10">
+            <input type="text" name="college" class="form-control" id="college" placeholder="College" required value="{{ college }}">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="name" class="col-sm-2 control-label">Branch</label>
+          <div class="col-sm-10">
+            <input type="text" name="branch" class="form-control" id="branch" placeholder="branch" value="{{ branch }}">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="col-sm-2 control-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" name="email" class="form-control" id="email" placeholder="Email" value="{{ email }}">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="contactnum" class="col-sm-2 control-label">Contact Number</label>
+          <div class="col-sm-10">
+            <input type="text" name="contactnum" class="form-control" id="contactnum" placeholder="Contact Number" maxlength="10" minlength="10" required value="{{ contactnum }}">
+          </div>
+        </div>
+        <hr>
+
+        <center><h3>EVENTS</h3></center>
+        <br/><br/>
+        <div class="row">
+        <div class="col-md-4">
+
+        <legends><strong>CHEMOZALE</strong></legends><br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="CHEM-O-WHEELS" {% if "CHEM-O-WHEELS" in EVENTS %}checked="1"{% endif %}>
+        Chemo-O-Wheel<br/>        
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="CHEMOLOGY" {% if "CHEMOLOGY" in EVENTS %}checked="1"{% endif %}>
+        Chemology<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="INDUSTRIAL EXPERIENCE" {% if "INDUSTRIAL EXPERIENCE" in EVENTS %}checked="1"{% endif %}>
+        Indusstrial Experience<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="CHEMICAL HOUSIE" {% if "CHEMICAL HOUSIE" in EVENTS %}checked="1"{% endif %}>
+        Chemical Housie<br/><br/>
+
+        <legends><strong>CODE-O-CRATS</strong></legends><br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="SHOT N SWEET"
+        {% if "SHOT N SWEET" in EVENTS %}checked="1"{% endif %}>
+        Shot N Sweet<br/>        
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="JIGSAW PUZZLE"
+        {% if "JIGSAW PUZZLE" in EVENTS %}checked="1"{% endif %}>
+        Jigsaw Puzzle<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="WEB DESIGN"
+        {% if "WEB DESIGN" in EVENTS %}checked="1"{% endif %}>
+        Web Design<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="VOID FNX"
+        {% if "VOID FNX" in EVENTS %}checked="1"{% endif %}>
+        Void FNX<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="CODE TADKA"
+        {% if "CODE TADKA" in EVENTS %}checked="1"{% endif %}>
+        Code Tadka<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="TECH HUNT"
+        {% if "TECH HUNT" in EVENTS %}checked="1"{% endif %}>
+        Tech Hunt<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="CODE RELAY" {% if "CODE RELAY" in EVENTS %}checked="1"{% endif %}>&nbspCode Relay<br/><br/>
+
+
+        <legends><strong>EC-TRONICS</strong></legends><br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="CRACKDUINO"
+        {% if "CRACKDUINO" in EVENTS %}checked="1"{% endif %}>
+        Crackduino<br/>        
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="DIGIMAKER"
+        {% if "DIGIMAKER" in EVENTS %}checked="1"{% endif %}>
+        Digimaker<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="LINE FOLLOWER" {% if "LINE FOLLOWER" in EVENTS %}checked="1"{% endif %}>Line Follower<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="V-LOG CHALLENGE"
+        {% if "V-LOG CHALLENGE" in EVENTS %}checked="1"{% endif %}>
+        V-Log Challenge<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="TX-RX"
+        {% if "TX-RX" in EVENTS %}checked="1"{% endif %}>
+        TX-RX<br/><br/>
+
+        <legends><strong>Civil Maniacs</strong></legends><br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="ROLLER CIVISTER" {% if "ROLLER CIVISTER" in EVENTS %}checked="1"{% endif %}>
+        Roller Civister<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="CG MANIA" {% if "CG MANIA" in EVENTS %}checked="1"{% endif %}>
+        CG Mania<br/>  
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="CIVIL HUNT" {% if "CIVIL HUNT" in EVENTS %}checked="1"{% endif %}>
+        Civil Hunt<br/>  
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="MODEL MAKING" {% if "MODEL MAKING" in EVENTS %}checked="1"{% endif %}>
+        Model Making<br/>          
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="SITE MASTER" {% if "SITE MASTER" in EVENTS %}checked="1"{% endif %}>
+        Site Master<br/><br/>
+
+        
+        </div>
+
+        <div class="col-md-4">
+        
+        <legends><strong>Elecspire</strong></legends><br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="EMBED CHI" {% if "EMBED CHI" in EVENTS %}checked="1"{% endif %}>
+        Embed Chi<br/> 
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="MAN VS TECHNOLOGY" {% if "MAN VS TECHNOLOGY" in EVENTS %}checked="1"{% endif %}>
+        Man vs Technology<br/> 
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="FUSE DEFUSE" {% if "FUSE DEFUSE" in EVENTS %}checked="1"{% endif %}>
+        Fuse Defuse<br/> 
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="GOT VOLTS?" {% if "GOT VOLTS?" in EVENTS %}checked="1"{% endif %}>
+        Got Volts?<br/> 
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="NERD QUIZ" {% if "NERD QUIZ" in EVENTS %}checked="1"{% endif %}>
+        Nerd Quiz<br/>        
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="TECH MEME MAKER" {% if "TECH MEME MAKER" in EVENTS %}checked="1"{% endif %}>
+        Tech Meme Maker<br/><br/>
+
+        <legends><strong>Mechatrix</strong></legends><br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="HELL IN CELL" {% if "HELL IN CELL" in EVENTS %}checked="1"{% endif %}>
+        Hell in Cell<br/>        
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="ROBORUN"
+        {% if "ROBORUN" in EVENTS %}checked="1"{% endif %}
+        >
+        Roborun<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="WATER ROCKET" {% if "WATER ROCKET" in EVENTS %}checked="1"{% endif %}>
+        Water Rocket<br/>        
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="CAD CREATOR"
+        {% if "CAD CREATOR" in EVENTS %}checked="1"{% endif %}>
+        CAD Creator<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="AERO MOBILE QUIZ"
+        {% if "AERO MOBILE QUIZ" in EVENTS %}checked="1"{% endif %}>
+        Aero Mobile Quiz<br/><br/>
+
+        <legends><strong>Noesis</strong></legends><br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="INDIA QUIZ" {% if "INDIA QUIZ" in EVENTS %}checked="1"{% endif %}>
+        India Quiz<br/>        
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="GENERAL QUIZ" {% if "GENERAL QUIZ" in EVENTS %}checked="1"{% endif %}>
+        General Quiz<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="DEBATE" {% if "DEBATE" in EVENTS %}checked="1"{% endif %}>
+        Debate<br/><br/>
+
+        <legends><strong>Start Up Bazaar</strong></legends><br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="START UP CONCLAVE"
+        {% if "START UP CONCLAVE" in EVENTS %}checked="1"{% endif %}>
+        Start Up Conclave<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="MARKET DAY"
+        {% if "MARKET DAY" in EVENTS %}checked="1"{% endif %}>
+        Market Day<br/><br/>
+
+        <legends><strong>Euphoria</strong></legends><br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="BEG BORROW STEAL" {% if "BEG BORROW STEAL" in EVENTS %}checked="1"{% endif %}>
+        Beg,Borrow,Steal<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="MAD MARKETING" {% if "MAD MARKETING" in EVENTS %}checked="1"{% endif %}>
+        Mad Marketing<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="SHERMOCK" {% if "SHERMOCK" in EVENTS %}checked="1"{% endif %}>
+        Shermock<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="EVENT FUSION" {% if "EVENT FUSION" in EVENTS %}checked="1"{% endif %}>
+        Event Fusion<br/><br/>
+        </div>
+        
+
+        <div class="col-md-4">
+          <legends><strong>Think IC</strong></legends><br/>
+         <input type="checkbox" class="form-check-input" name="EVENTS" value="ELECTROVYAPAR"
+         {% if "ELECTROVYAPAR" in EVENTS %}checked="1"{% endif %}>
+         Electrovyapar<br/>
+         <input type="checkbox" class="form-check-input" name="EVENTS" value="E MANIA"
+         {% if "E MANIA" in EVENTS %}checked="1"{% endif %}>
+         E Mania<br/>
+         <input type="checkbox" class="form-check-input" name="EVENTS" value="E PLACEMENT"
+         {% if "E PLACEMENT" in EVENTS %}checked="1"{% endif %}>
+         E Placement<br/><br/>
+
+          <legends><strong>Workshops</strong></legends><br/>
+          <input type="checkbox" class="form-check-input" name="WORKSHOPS" value="GOOGLE ADWORDS WORKSHOP" {% if "GOOGLE ADWORDS WORKSHOP" in EVENTS %}checked="1"{% endif %}>
+          Google Adword Workshop<br/>
+          <input type="checkbox" class="form-check-input" name="WORKSHOPS" value="AGILE SOFTWARE DEVELOPEMENT"
+          {% if "AGILE SOFTWARE DEVELOPEMENT" in EVENTS %}checked="1"{% endif %}>
+          Agile Software Developement<br/>
+          <input type="checkbox" class="form-check-input" name="WORKSHOPS" value="DWSIM"
+          {% if "DWSIM" in EVENTS %}checked="1"{% endif %}>
+          DWSIM<br/>
+          <input type="checkbox" class="form-check-input" name="WORKSHOPS" value="SMART CITY GRID AND NETWORK SECURITY" {% if "SMART CITY GRID AND NETWORK SECURITY" in EVENTS %}checked="1"{% endif %}>
+          Smart City Grid and Network Security<br/>
+          <input type="checkbox" class="form-check-input" name="WORKSHOPS" value="ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING" {% if "ARTIFICIAL INTELLIGENCE AND MACHINE LEARNING" in EVENTS %}checked="1"{% endif %}>
+          Artificial Intelligence and Machine Learning<<br/>
+          <input type="checkbox" class="form-check-input" name="WORKSHOPS" value="WINGS+" {% if "WINGS+" in EVENTS %}checked="1"{% endif %}>
+          Wings+<br/>
+          <input type="checkbox" class="form-check-input" name="WORKSHOPS" value="CIRCUITS.IO" {% if "CIRCUITS.IO" in EVENTS %}checked="1"{% endif %}>
+          Circuits.io<br/>
+          <input type="checkbox" class="form-check-input" name="WORKSHOPS" value="AEROSPACE" {% if "AEROSPACE" in EVENTS %}checked="1"{% endif %}>
+          Aerospace<br/>
+          <input type="checkbox" class="form-check-input" name="WORKSHOPS" value="AUTOMOBILE" {% if "AUTOMOBILE" in EVENTS %}checked="1"{% endif %}>
+          Automobile<br/>
+          <input type="checkbox" class="form-check-input" name="WORKSHOPS" value="CYBER SECURITY" {% if "CYBER SECURITY" in EVENTS %}checked="1"{% endif %}>
+          Cyber Security<br/>
+          <input type="checkbox" class="form-check-input" name="WORKSHOPS" value="STADD PRO" {% if "STADD PRO" in EVENTS %}checked="1"{% endif %}>
+          Stadd Pro<br/>
+          <input type="checkbox" class="form-check-input" name="WORKSHOPS" value="GESTURE ROBOTICS" {% if "GESTURE ROBOTICS" in EVENTS %}checked="1"{% endif %}>
+          Gesture Robotics<br/><br/>
+
+           <legends><strong>Projects/Papers</strong></legends><br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="PROJECT-O-GRAM"
+        {% if "PROJECT-O-GRAM" in EVENTS %}checked="1"{% endif %}>
+        Program-o-Gram<br/><br/>
+
+         <legends><strong>Others</strong></legends><br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="TECHNURBS LECTURE SERIES"
+        {% if "TECHNURBS LECTURE SERIES" in EVENTS %}checked="1"{% endif %}>
+        Technurbs Lecture Series<br/>
+        <input type="checkbox" class="form-check-input" name="EVENTS" value="MACHEPHY"
+        {% if "MACHEPHY" in EVENTS %}checked="1"{% endif %}>
+        MaChePhy<br/><br/>
+
+        </div>        
+        </div>
+
+        <div class="form-group">
+          <label for="totalfee" class="col-sm-2 control-label">Total Fee</label>
+          <div class="col-sm-2">
+            <input type="number" name="totalfee" class="form-control" id="totalfee" required value={{ totalfee }}>
+          </div>
+
+          <label for="paid" class="col-sm-2 control-label">Paid</label>
+          <div class="col-sm-2">
+            <input type="number" name="paid" class="form-control" id="paid" required value={{ paid }}>
+          </div>
+
+          <label for="remaining" class="col-sm-2 control-label">Remaining</label>
+          <div class="col-sm-2">
+            <input type="number" name="remaining" class="form-control" id="remaining" required value={{ remaining }}>
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+
+        
+   <!--
+    <div class="row">
+      <form class="form-horizontal" action="/Submit" method="post">
+
         <div class="form-group">
           <label for="regid" class="col-sm-2 control-label">Registration Id</label>
           <div class="col-sm-10">
             <input type="text" name="regid" class="form-control" id="regid" placeholder="Registration Id" value="{{ regid }}">
           </div>
         </div>
+
         <div class="form-group">
           <label for="name" class="col-sm-2 control-label">Name</label>
           <div class="col-sm-10">
@@ -41,19 +295,90 @@
           </div>
         </div>
 
-        <div class="form-group">
-          <label for="contactnum" class="col-sm-2 control-label">Contact Number</label>
-          <div class="col-sm-10">
-            <input type="text" name="contactnum" class="form-control" id="contactnum" placeholder="Contact Number" value="{{ contactnum }}" maxlength="10" minlength="10">
-          </div>
-        </div>
-
+        
         <div class="form-group">
           <label for="email" class="col-sm-2 control-label">Email</label>
           <div class="col-sm-10">
             <input type="email" name="email" class="form-control" id="email" placeholder="Email" value={{ email }}>
           </div>
         </div>
+
+         <div class="form-group">
+          <label for="contactnum" class="col-sm-2 control-label">Contact Number</label>
+          <div class="col-sm-10">
+            <input type="text" name="contactnum" class="form-control" id="contactnum" placeholder="Contact Number" value="{{ contactnum }}" maxlength="10" minlength="10">
+          </div>
+        </div>
+
+        
+
+        
+        <hr>
+
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-4"><h4>EVENTS</h4></div>
+          
+          <div class="col-md-2"></div>
+        </div>
+        
+
+        <div class="row">
+
+          
+          
+          <div class="col-md-3"><input type="checkbox" name="EVENTS" value="VoidFNX" {% if "VoidFNX" in EVENTS %}checked="1"{% endif %}> VoidFNX</div>
+           
+
+         
+           <div class="col-md-3"><input type="checkbox" name="EVENTS" value="CodeCracker" {% if "CodeCracker" in EVENTS %}checked="1"{% endif %}> CodeCracker</div>
+          
+           
+           
+           <div class="col-md-3"><input type="checkbox" name="EVENTS" value="SnoopCode" {% if "SnoopCode" in EVENTS %}checked="1"{% endif %}> SnoopCode</div>
+          
+
+           
+          <div class="col-md-3"><input type="checkbox" name="EVENTS" value="StackedUp" {% if "StackedUp" in EVENTS %}checked="1"{% endif %}> StackedUp</div>
+         
+          
+        </div>
+
+        
+
+        <div class="row">
+
+         
+        <div class="col-md-3"><input type="checkbox" name="EVENTS" value="TeachMachine" {% if "TeachMachine" in EVENTS %}checked="1"{% endif %}> TeachMachine</div>
+        
+
+        <div class="col-md-3"><input type="checkbox" name="EVENTS" value="DesignNDevelop" {% if "DesignNDevelop" in EVENTS %}checked="1"{% endif %}> DesignNDevelop</div>
+        
+
+        
+        <div class="col-md-3"><input type="checkbox" name="EVENTS" value="QuizUp" {% if "QuizUp" in EVENTS %}checked="1"{% endif %}> QuizUp</div>
+
+        <div class="col-md-3"><input type="checkbox" name="EVENTS" value="StealJobs" {% if "StealJobs" in EVENTS %}checked="1"{% endif %}> StealJobs</div>
+        
+        
+
+        </div>
+
+        <div class="row">
+        
+          
+        <div class="col-md-3"><input type="checkbox" name="EVENTS" value="Catch'em All" {% if "Catch'em All" in EVENTS %}checked="1"{% endif %}> Catch'em All</div>
+       
+        <div class="col-md-3"><input type="checkbox" name="EVENTS" value="Degree In A Day" {% if "Degree In A Day" in EVENTS %}checked="1"{% endif %}> Degree In A Day</div>
+       
+        <div class="col-md-3"><input type="checkbox" name="WORKSHOPS" value="Ethical Hacking Workshop" {% if "Ethical Hacking Workshop" in WORKSHOPS %}checked="1"
+        {% endif %}> Ethical Hacking Workshop</div>
+        
+
+        </div>
+        <br>
+        <hr>
+        <br>
         <div class="form-group">
           <label for="totalfee" class="col-sm-2 control-label">Total Fee</label>
           <div class="col-sm-2">
@@ -70,38 +395,9 @@
             <input type="number" name="remaining" class="form-control" id="remaining" value={{ remaining }} required>
           </div>
         </div>
+       <br>
+       <br>
 
-        <br>
-        <hr>
-
-        <div class="row">
-          <div class="col-md-2"></div>
-          <div class="col-md-4"><h3>EVENTS</h3></div>
-          <div class="col-md-4"><h3>WORKSHOPS</h3></div>
-          <div class="col-md-2"></div>
-        </div>
-        <hr>
-        <div class="row">
-          <div class="col-md-2"></div>
-          <div class="col-md-4">
-            <input type="checkbox" name="EVENTS" value="Mock Placement" {% if "Mock Placement" in EVENTS %}checked="1"{% endif %}> Mock Placement
-          </div>
-          <div class="col-md-4">
-            <input type="checkbox" name="WORKSHOPS" value="Internet Of Things" {% if "Internet Of Things" in EVENTS %}checked="1"{% endif %}> Internet Of Things
-          </div>
-        </div>
-
-        <div class="row"><div class="col-md-2"></div> <div class="col-md-4"><input type="checkbox" name="EVENTS" value="General Quiz" {% if "General Quiz" in EVENTS %}checked="1"{% endif %}> General Quiz</div><div class="col-md-4"></div></div>
-        <div class="row"><div class="col-md-2"></div> <div class="col-md-4"><input type="checkbox" name="EVENTS" value="Pockmon Go" {% if "Pockmon Go" in EVENTS %}checked="1"{% endif %}> Pockmon Go</div><div class="col-md-4"></div></div>
-        <div class="row"><div class="col-md-2"></div> <div class="col-md-4"><input type="checkbox" name="EVENTS" value="Code-Base Tressure Hunt" {% if "Code-Base Tressure Hunt" in EVENTS %}checked="1"{% endif %}> Code-Base Tressure Hunt</div><div class="col-md-4"></div></div>
-        <div class="row"><div class="col-md-2"></div> <div class="col-md-4"><input type="checkbox" name="EVENTS" value="Machine Learning" {% if "Machine Learning" in EVENTS %}checked="1"{% endif %}> Machine Learning</div><div class="col-md-4"></div></div>
-        <div class="row"><div class="col-md-2"></div> <div class="col-md-4"><input type="checkbox" name="EVENTS" value="Core Coding" {% if "Core Coding" in EVENTS %}checked="1"{% endif %}> Core Coding</div><div class="col-md-4"></div></div>
-        <div class="row"><div class="col-md-2"></div> <div class="col-md-4"><input type="checkbox" name="EVENTS" value="Light Coding" {% if "Light Coding" in EVENTS %}checked="1"{% endif %}> Light Coding</div><div class="col-md-4"></div></div>
-        <div class="row"><div class="col-md-2"></div> <div class="col-md-4"><input type="checkbox" name="EVENTS" value="Data Structures Coding" {% if "Data Structures Coding" in EVENTS %}checked="1"{% endif %}> Data Structures Coding</div><div class="col-md-4"></div></div>
-        <div class="row"><div class="col-md-2"></div> <div class="col-md-4"><input type="checkbox" name="EVENTS" value="Web Designing" {% if "Web Designing" in EVENTS %}checked="1"{% endif %}> Web Designing</div><div class="col-md-4"></div></div>
-        <div class="row"><div class="col-md-2"></div> <div class="col-md-4"><input type="checkbox" name="EVENTS" value="R&D" {% if "R&D" in EVENTS %}checked="1"{% endif %}> R&D</div><div class="col-md-4"></div></div>
-        
-        <hr>
 
         <div class="row">
         <div class="form-group">
@@ -114,6 +410,25 @@
     </div>
 
   </div>
+
+</body>
+
+</html>
+ -->
+ <div class="row">
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Submit</button>
+            
+          </div>
+        </div>
+        </div>
+
+</form>
+    </div>
+
+  </div>
+
 
 </body>
 
